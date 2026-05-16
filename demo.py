@@ -62,6 +62,7 @@ def run(condition, value):
     """Run a simulation in the given condition. Returns the simulation trace."""
     copd_pca.CONDITION = condition
     copd_pca.K_TIME = value
+    copd_pca.PARAMS = copd_pca.build_params()
     set_seed(SEED)
     np.random.seed(SEED)
     ca0 = GenerateCA(GRIDSIZE, copd_pca.cellcolors, INIT_WEIGHTS)
