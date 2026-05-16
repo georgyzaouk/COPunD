@@ -116,7 +116,7 @@ def main():
             ax.set_title(f"{'Fibrocyte' if key=='F' else 'CD8'} count over time")
             ax.legend(loc='best')
             ax.grid(alpha=0.3)
-        fig.suptitle("COPD CA: synchronous-update simplification of Dupin et al. (2023)",
+        fig.suptitle(f"COPunD: synchronous-update simplification of Dupin et al. (2023) - K={value}",
                      fontsize=10)
         plt.tight_layout()
         plt.savefig(f'Project/{key1}/{key1}_counts.png', dpi=120)

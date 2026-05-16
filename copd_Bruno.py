@@ -33,7 +33,7 @@ CURRENT_STEP = 0
 # Methods
 # ==========
 # Scaling helper
-def _scale(p: float, k: int = K_TIME) -> float:
+def _scale(p: float) -> float:
     """
         Convert a probability defined at micro-time scale into a macro-time probability.
         Formula:
@@ -41,7 +41,7 @@ def _scale(p: float, k: int = K_TIME) -> float:
         This is the probability that an event happens at least once
         during k independent substeps.
     """
-    return 1.0 - (1.0 - p) ** k
+    return 1.0 - (1.0 - p) ** K_TIME
 
 
 # Cohesion function (anti-diffusion effect)
