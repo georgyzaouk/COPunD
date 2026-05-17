@@ -24,6 +24,10 @@ The model compares two conditions:
 
 The COPD condition includes increased fibrocyte infiltration and CD8 cell proliferation, allowing the simulation to reproduce progressive inflammatory cell accumulation over time.
 
+### Small preview
+Here is a little demonstration of the Cellular Automaton when simulating the COPD condition:
+<img src="Project/625days_COPD.gif"/>
+
 ## Report
 You can find the description of COPunD in [COPunD - Report.pdf](https://github.com/georgyzaouk/COPunD/blob/main/COPunD%20-%20Report.pdf), with its appendix [here](https://github.com/georgyzaouk/COPunD/blob/main/COPunD%20-%20Appendix.pdf).
 
