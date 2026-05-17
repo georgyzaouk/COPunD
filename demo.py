@@ -1,5 +1,5 @@
 """
-Demo for the COPD CA model — runs both conditions without the GUI.
+Demo for the COPD CA model — runs both conditions without the CA GUI.
 
 Generates initial states for control and COPD, runs the synchronous CA
 simulation in each, and saves:
@@ -21,9 +21,9 @@ from cellularautomata import GenerateCA, SimulateCA, ShowSimulation
 import copd_Bruno as copd_pca
 
 
-# ============================================================
+
 # Settings
-# ============================================================
+# =========
 GRIDSIZE = 50
 DURATION = 300
 SEED = 42
@@ -32,11 +32,12 @@ SEED = 42
 INIT_WEIGHTS = {'Empty': 0.965, 'Fibrocyte': 0.005, 'CD8': 0.030}
 
 
-# ============================================================
 # Helpers
-# ============================================================
+# ========
 def count_cells(grid):
-    """Return (n_F, n_C) for a 2D cell-tuple grid."""
+    """
+        Returns (n_F, n_C) for a 2D cell-tuple grid.
+    """
     n_F = n_C = 0
     for row in grid:
         for cell in row:
@@ -48,7 +49,9 @@ def count_cells(grid):
 
 
 def grid_to_image(grid):
-    """Convert a 2D cell-tuple grid to an integer image for imshow."""
+    """
+        Convert a 2D cell-tuple grid to an integer image for imshow.
+    """
     type_to_idx = {'Empty': 0, 'Fibrocyte': 1, 'CD8': 2}
     n = len(grid)
     img = np.zeros((n, n), dtype=int)
@@ -59,7 +62,9 @@ def grid_to_image(grid):
 
 
 def run(condition, value):
-    """Run a simulation in the given condition. Returns the simulation trace."""
+    """
+        Run a simulation in the given condition. Returns the simulation trace.
+    """
     copd_pca.CONDITION = condition
     copd_pca.K_TIME = value
     copd_pca.PARAMS = copd_pca.build_params()
@@ -69,9 +74,8 @@ def run(condition, value):
     return SimulateCA(ca0, copd_pca.CopdPCA, duration=DURATION)
 
 
-# ============================================================
 # Main
-# ============================================================
+# =====
 def main():
     print(f"COPD CA Demo — {GRIDSIZE}x{GRIDSIZE} grid, {DURATION} steps\n")
     tests = {'12days': 1, '125days': 10, '250days': 20, '625days': 50}
@@ -82,9 +86,10 @@ def main():
         ('CD8',       None): '#e91e8c',   # pink  — CD8+ T lymphocyte
     }
 
-    colors = {'control': '#27ae60', 'COPD': '#e91e8c'}
+    colors = {'control': '#27ae60', 'COPD': '#e91e8c'} # is it pink?
 
     for key1, value in tests.items():
+        # Runs the CA for each timescaled conditions
         results = {}
         os.makedirs(f"Project/{key1}", exist_ok=True)
         for condition in ('control', 'COPD'):
@@ -105,7 +110,7 @@ def main():
             print(f"  final:   F={F_traj[-1]:>3d}  C={C_traj[-1]:>3d}")
             print(f"  last {tail}-step mean: F={avg_F:.0f}  C={avg_C:.0f}\n")
 
-        # --- Plot population over time --------------------------------
+        # Plot population over time
         fig, axes = plt.subplots(1, 2, figsize=(11, 4))
         for ax, key in zip(axes, ['F', 'C']):
             for condition in ('control', 'COPD'):
@@ -121,7 +126,7 @@ def main():
         plt.tight_layout()
         plt.savefig(f'Project/{key1}/{key1}_counts.png', dpi=120)
 
-        # --- Snapshots ------------------------------------------------
+        # Snapshots
         cmap = ListedColormap(['whitesmoke', '#27ae60', '#e91e8c'])
         fig, axes = plt.subplots(2, 2, figsize=(9, 9))
         for row, condition in enumerate(('control', 'COPD')):
