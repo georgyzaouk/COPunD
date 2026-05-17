@@ -26,7 +26,7 @@ The COPD condition includes increased fibrocyte infiltration and CD8 cell prolif
 
 ### Small preview
 Here is a little demonstration of the Cellular Automaton when simulating the COPD condition:
-<img src="Project/625days_COPD.gif"/>
+<img src="Project/625days/625days_COPD.gif"/>
 
 ## Report
 You can find the description of COPunD in [COPunD - Report.pdf](https://github.com/georgyzaouk/COPunD/blob/main/COPunD%20-%20Report.pdf), with its appendix [here](https://github.com/georgyzaouk/COPunD/blob/main/COPunD%20-%20Appendix.pdf).
