@@ -1,5 +1,5 @@
 # COPunD
-**Modeling and Implementing a Deep Learning Library**  
+**Modeling and Simulating Chronic Obstructive Pulmonary Disease**  
 *Modeling and Simulation of biological systems — Université Paris-Saclay*
 
 -----------------------------------------------------
