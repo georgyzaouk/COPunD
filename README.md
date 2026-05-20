@@ -1,4 +1,4 @@
-# COPunD
+# COPunD : Chronic Obstructive Pulmonary underlying Dynamics
 **Modeling and Simulating Chronic Obstructive Pulmonary Disease**  
 *Modeling and Simulation of biological systems — Université Paris-Saclay*
 
@@ -7,6 +7,7 @@
 
 The objective of this project is to reproduce, in a simplified way, how local interactions between fibrocytes and CD8+ T lymphocytes may lead to different spatial patterns in healthy and COPD-like tissue conditions.
 
+#### [Presenting COPunD: Cellular Automata for COPD Dynamics. (Slides only)](https://canva.link/4ikhlhv4ehuts2t)
 -------
 
 ## Project Overview
