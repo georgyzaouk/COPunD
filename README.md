@@ -1,6 +1,7 @@
 # COPunD : Chronic Obstructive Pulmonary underlying Dynamics
 **Modeling and Simulating Chronic Obstructive Pulmonary Disease**  
-*Modeling and Simulation of biological systems — Université Paris-Saclay*
+*Modeling and Simulation of biological systems — Université Paris-Saclay*  
+###### By [@crakshay1](https://github.com/crakshay1), [@georgyzaouk](https://github.com/georgyzaouk) & [@zyrok12](https://github.com/zyrok12)
 
 -----------------------------------------------------
 **COPunD** is a simplified cellular automaton model inspired by the work of Dupin et al. (2023) on fibrocyte and CD8+ T-cell interactions in Chronic Obstructive Pulmonary Disease (COPD).
